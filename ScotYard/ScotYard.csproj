@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C313E38B-7C51-4E34-A3B6-7267C812DFDE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScotYard</RootNamespace>
+    <AssemblyName>ScotYard</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ScotAI">
+      <HintPath>..\ScotAI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Jeu\FrmAPropos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jeu\FrmAPropos.Designer.cs">
+      <DependentUpon>FrmAPropos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jeu\FrmJeuPlateau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jeu\FrmJeuPlateau.Designer.cs">
+      <DependentUpon>FrmJeuPlateau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jeu\Options\FrmJeuOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jeu\Options\FrmJeuOptions.Designer.cs">
+      <DependentUpon>FrmJeuOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jeu\Règlements\FrmReglementsDuJeu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jeu\Règlements\FrmReglementsDuJeu.Designer.cs">
+      <DependentUpon>FrmReglementsDuJeu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jeu\FrmValidationNouvellePartie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jeu\FrmValidationNouvellePartie.Designer.cs">
+      <DependentUpon>FrmValidationNouvellePartie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jeu\FrmValidationQuitter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jeu\FrmValidationQuitter.Designer.cs">
+      <DependentUpon>FrmValidationQuitter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logique\JoueurDetective.cs" />
+    <Compile Include="Logique\Joueur.cs" />
+    <Compile Include="Logique\JoueurMisterX.cs" />
+    <Compile Include="Logique\Case.cs" />
+    <Compile Include="Menu Principal\FrmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu Principal\FrmMenuPrincipal.Designer.cs">
+      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jeu\Options\FrmJeuOptionsErreur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jeu\Options\FrmJeuOptionsErreur.Designer.cs">
+      <DependentUpon>FrmJeuOptionsErreur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jeu\FrmPartieGagne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jeu\FrmPartieGagne.Designer.cs">
+      <DependentUpon>FrmPartieGagne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jeu\FrmPartiePerdue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jeu\FrmPartiePerdue.Designer.cs">
+      <DependentUpon>FrmPartiePerdue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jeu\FrmExplicationTicketsStations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jeu\FrmExplicationTicketsStations.Designer.cs">
+      <DependentUpon>FrmExplicationTicketsStations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Jeu\FrmAPropos.resx">
+      <DependentUpon>FrmAPropos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jeu\FrmJeuPlateau.resx">
+      <DependentUpon>FrmJeuPlateau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jeu\Options\FrmJeuOptions.resx">
+      <DependentUpon>FrmJeuOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Principal\FrmMenuPrincipal.resx">
+      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jeu\Règlements\FrmReglementsDuJeu.resx">
+      <DependentUpon>FrmReglementsDuJeu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jeu\FrmValidationNouvellePartie.resx">
+      <DependentUpon>FrmValidationNouvellePartie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jeu\FrmValidationQuitter.resx">
+      <DependentUpon>FrmValidationQuitter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jeu\Options\FrmJeuOptionsErreur.resx">
+      <DependentUpon>FrmJeuOptionsErreur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jeu\FrmPartieGagne.resx">
+      <DependentUpon>FrmPartieGagne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jeu\FrmPartiePerdue.resx">
+      <DependentUpon>FrmPartiePerdue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jeu\FrmExplicationTicketsStations.resx">
+      <DependentUpon>FrmExplicationTicketsStations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScotYardBordure.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScotlandYardBoard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plateau.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PionJaune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PionMauve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PionRouge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PionTransparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PionVert.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plateau1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableauMasterX.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TicketBus.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TicketMetro.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TicketNoir.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TicketTaxi.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScotlandYardLetters.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhotoComposants.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhotoConseilsTactiques.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhotoCoupsSpeciaux.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhotoFinDuJeu.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhotoPreparation.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhotoTourDeJeu1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhotoTourDeJeu2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PionNoir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PionVert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PionOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PionBrun.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PionCorail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PionBleuPale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PionVert1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PionVert1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PionBrun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableauMasterX1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableauMasterX2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableauMasterX3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableauMasterX4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableauMaster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableauMaster1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableauMaster2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableauMasterX9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkGrey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detective.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PionDetective.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PionDetective1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableauCercle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableauCercleApparition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableauCercleApparition1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableauCerclePasApparition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PionsRouge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PionsRouge1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fleche.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Planche.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlanchesIndication.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScotlandYardBoard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RouletteOption.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlanchesIndication1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Composants.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComposantsFnl.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComposantsVf.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fleche2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loop.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
